@@ -1,4 +1,13 @@
-# health-shiti-h5
+# uniapp-with-typescript-eslint-husky-template
+
+## use it: clone
+
+```
+git clone git@github.com:zhuo-tech/uniapp-with-typescript-eslint-husky-template.git [my-project]
+cd [my-project]
+git remote remove origin
+git remote add origin [your-own-project-repo-url]
+```
 
 ## Project setup
 ```
