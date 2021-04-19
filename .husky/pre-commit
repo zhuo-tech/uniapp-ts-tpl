@@ -3,4 +3,4 @@
 
 echo 'pre-commit'
 npx lint-staged
-npx run fix
+npm run fix
