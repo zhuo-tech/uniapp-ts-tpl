@@ -4,6 +4,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+
 new App({
   store
 }).$mount()

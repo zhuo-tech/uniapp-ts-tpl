@@ -45,7 +45,9 @@
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "proxy": "npx http-server . -d false -p 80 -P http://localhost:10086"
+    "proxy": "npx http-server . -d false -p 80 -P http://localhost:10086",
+    "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx,.vue",
+    "fix": "npx eslint src --fix --ext .js,.jsx,.ts,.tsx,.vue"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31820210406002",
@@ -87,10 +89,14 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-typescript": "*",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-plugin-typescript": "^4.5.12",
     "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^7.9.0",
     "http-server": "^0.12.3",
     "jest": "^25.4.0",
     "mini-types": "*",
@@ -98,7 +104,7 @@
     "node-sass": "^4.14.1",
     "postcss-comment": "^2.0.0",
     "sass-loader": "^7.3.1",
-    "typescript": "^3.0.0",
+    "typescript": "~4.1.5",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",
     "vue-template-compiler": "^2.6.11"

@@ -26,8 +26,8 @@ export default class IndexPage extends Vue {
     { id: 2, name: 'C' }
   ]
 
-  get store() {
-    return this.$store.state as RootState
+  get store(): RootState {
+    return this.$store.state
   }
 
   // computed
