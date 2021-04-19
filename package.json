@@ -47,7 +47,8 @@
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
     "proxy": "npx http-server . -d false -p 80 -P http://localhost:10086",
     "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx,.vue",
-    "fix": "npx eslint src --fix --ext .js,.jsx,.ts,.tsx,.vue"
+    "fix": "npx eslint src --fix --ext .js,.jsx,.ts,.tsx,.vue",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31820210406002",
@@ -98,7 +99,9 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^7.9.0",
     "http-server": "^0.12.3",
+    "husky": "^5.2.0",
     "jest": "^25.4.0",
+    "lint-staged": "8.1.5",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "node-sass": "^4.14.1",
@@ -113,7 +116,17 @@
     "Android >= 4",
     "ios >= 8"
   ],
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6.0.0"
+  },
   "uni-app": {
     "scripts": {}
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
