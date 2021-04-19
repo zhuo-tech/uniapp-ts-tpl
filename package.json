@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "deploy:staging": "npm run build:staging && rsync -rvtP ./dist/dev/h5/  zhuo-dev:/home/gms/gms-shiti-h5",
+    "deploy:win": "scp -rv ./dist/dev/h5/  zhuo-dev:/home/gms/gms-shiti-h5",
+    "deploy:prod": "rsync -rvtP ./dist/build/h5/  smt-prod:/mnt/front/tenant-shiti-h5",
     "serve": "npm run dev:h5",
-    "build": "npm run build:h5",
+    "start": "npm run serve",
+    "build:prod": "npm run build:h5",
+    "build:staging": "cross-env NODE_ENV=staging UNI_PLATFORM=h5 vue-cli-service uni-build",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
@@ -39,7 +44,8 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "proxy": "npx http-server . -d false -p 80 -P http://localhost:10086"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31820210406002",
@@ -61,9 +67,8 @@
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^7.3.1",
     "vue": "^2.6.11",
-    "vue-class-component": "^6.3.2",
-    "vue-property-decorator": "^8.0.0",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
@@ -79,16 +84,23 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-31820210406002",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-31820210406002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-31820210406002",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-typescript": "*",
     "@vue/cli-service": "~4.5.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "http-server": "^0.12.3",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
+    "node-sass": "^4.14.1",
     "postcss-comment": "^2.0.0",
+    "sass-loader": "^7.3.1",
     "typescript": "^3.0.0",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [

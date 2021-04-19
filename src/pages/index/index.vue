@@ -1,50 +1,72 @@
 <template>
-	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
-		<view>
-            <text class="title">{{title}}</text>
-        </view>
-	</view>
+  <view class="content">
+    <image class="logo" src="../../static/logo.png"></image>
+    <view>
+      <text class="title">{{ title }}</text>
+      {{ store.user.name }}
+    </view>
+    <view v-for="item in lists" :key="item.id">
+      {{ item.name }}
+    </view>
+  </view>
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-	export default Vue.extend({
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+import Vue from 'vue'
+import Component from 'vue-class-component'
+import { RootState } from '@/store'
 
-		},
-		methods: {
+@Component
+export default class IndexPage extends Vue {
+  title = 'Zhuo-zhuo'
 
-		}
-	});
+  lists = [
+    { id: 0, name: 'A' },
+    { id: 1, name: 'B' },
+    { id: 2, name: 'C' }
+  ]
+
+  get store() {
+    return this.$store.state as RootState
+  }
+
+  // computed
+  get MyName(): string {
+    return `My name is ${this.title}`
+  }
+
+  // methods
+  sayHello(): void {
+    console.log(`Hello ${this.title}`)
+  }
+
+  mounted() {
+    this.sayHello()
+  }
+}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+<style lang="scss" scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
+.logo {
+  height: 200rpx;
+  width: 200rpx;
+  margin: 200rpx auto 50rpx auto;
+}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
+.text-area {
+  display: flex;
+  justify-content: center;
+}
 
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+.title {
+  font-size: 36rpx;
+  color: #8f8f94;
+}
 </style>
