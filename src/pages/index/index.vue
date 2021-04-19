@@ -41,7 +41,7 @@ export default class IndexPage extends Vue {
     console.log(`Hello ${this.title}`)
   }
 
-  mounted() {
+  mounted(): void {
     this.sayHello()
   }
 }
