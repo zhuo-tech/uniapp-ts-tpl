@@ -4,16 +4,21 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export class RootState {
-  user = {
-    nickname: null,
-    phone: null,
-    avatar: null
+export interface RootState {
+  user: {
+    nickname: string | null,
+    phone: string | null,
+    avatar: string | null
   }
 }
-
 export default new Vuex.Store<RootState>({
-  state: new RootState(),
+  state: {
+    user: {
+      nickname: null,
+      phone: null,
+      avatar: null
+    }
+  },
   mutations: {},
   actions: {},
   modules: {},

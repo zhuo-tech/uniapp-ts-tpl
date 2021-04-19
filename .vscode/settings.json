@@ -35,7 +35,7 @@
   },
   "vetur.experimental.templateInterpolationService": true, // vue template 属性提示
   "vetur.validation.templateProps": true,
-  "vetur.validation.interpolation": false,
+  "vetur.validation.interpolation": true,
   // javascript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {

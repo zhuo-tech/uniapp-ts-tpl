@@ -3,7 +3,7 @@
     <image class="logo" src="../../static/logo.png" />
     <view>
       <text class="title">{{ title }}</text>
-      {{ store.user.name }}
+      {{ state.user.nickname }}
     </view>
     <view v-for="item in lists" :key="item.id">
       {{ item.name }}
@@ -27,7 +27,7 @@ export default class IndexPage extends Vue {
     { id: 2, name: 'C' }
   ]
 
-  get store(): RootState {
+  get state(): RootState {
     return this.$store.state
   }
 
