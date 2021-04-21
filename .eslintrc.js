@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parserOptions: {
@@ -26,18 +27,6 @@ module.exports = {
     weex: true
   },
   rules: {
-    'vue/max-attributes-per-line': [
-      1,
-      {
-        singleline: 10,
-        multiline: {
-          max: 1,
-          allowFirstLine: false
-        }
-      }
-    ],
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/multiline-html-element-content-newline': 'off',
     'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
     'vue/no-unused-components': [
@@ -46,8 +35,14 @@ module.exports = {
         ignoreWhenBindingPresent: true
       }
     ],
+    'no-mixed-spaces-and-tabs': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'prettier/prettier': ['error', { singleQuote: true, semi: false }]
+    '@typescript-eslint/no-explicit-any': 'off',
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, semi: false, htmlWhitespaceSensitivity: 'ignore' }
+    ]
   }
 }

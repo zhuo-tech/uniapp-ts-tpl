@@ -2,7 +2,7 @@
   <view class="content">
     <image class="logo" src="../../static/logo.png" />
     <view>
-      <text class="title"> {{ title }}</text>
+      <text class="title">{{ title }}</text>
       {{ state.user.nickname }}
     </view>
     <view v-for="item in lists" :key="item.id">
