@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parserOptions: {
@@ -9,15 +8,13 @@ module.exports = {
     node: true,
     es6: true
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/recommended',
     '@vue/typescript/recommended',
-    // 'plugin:vue/recommended'
+    'plugin:prettier/recommended'
   ],
   globals: {
     uni: true,
@@ -29,21 +26,28 @@ module.exports = {
     weex: true
   },
   rules: {
-    'vue/max-attributes-per-line': [1, {
-      'singleline': 10,
-      'multiline': {
-        'max': 1,
-        'allowFirstLine': false
+    'vue/max-attributes-per-line': [
+      1,
+      {
+        singleline: 10,
+        multiline: {
+          max: 1,
+          allowFirstLine: false
+        }
       }
-    }],
+    ],
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
     'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
-    'vue/no-unused-components': [2, {
-      'ignoreWhenBindingPresent': true
-    }],
+    'vue/no-unused-components': [
+      2,
+      {
+        ignoreWhenBindingPresent: true
+      }
+    ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'prettier/prettier': ['error', { singleQuote: true }]
   }
 };

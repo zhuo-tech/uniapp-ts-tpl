@@ -1,15 +1,14 @@
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export interface RootState {
   user: {
-    nickname: string | null,
-    phone: string | null,
-    avatar: string | null
-  }
+    nickname: string | null;
+    phone: string | null;
+    avatar: string | null;
+  };
 }
 export default new Vuex.Store<RootState>({
   state: {
@@ -21,5 +20,5 @@ export default new Vuex.Store<RootState>({
   },
   mutations: {},
   actions: {},
-  modules: {},
-})
+  modules: {}
+});

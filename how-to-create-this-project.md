@@ -90,9 +90,14 @@ npm run lint
 > @see https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md
 
 ```sh
-npm i eslint@6.8.0 -D
-npm i @vue/eslint-config-typescript eslint-plugin-vue cli-plugin-eslint -D
+npm i eslint -D
+npm i @vue/eslint-config-typescript eslint-plugin-vue -D
+
+# for typescript-eslint
 npm i typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+
+# for prettier
+npm i eslint-config-prettier eslint-plugin-prettier -D
 ```
 
 Next, create a .eslintrc.js config file in the root of your project, and populate it with the following:
@@ -120,7 +125,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/recommended',
     '@vue/typescript/recommended',
-    // 'plugin:vue/recommended'
+    'plugin:prettier/recommended'
   ],
   rules: {
     'vue/max-attributes-per-line': [1, {
