@@ -5,8 +5,12 @@
     "eamodio.gitlens",
     "humao.rest-client",
     "yang-yue.switch-hosts",
-    "streetsidesoftware.code-spell-checker",
-    "tlent.jest-snapshot-language-support"
+    "andersonmfjr.vue-jumptotag",
+    "sainoba.px-to-rem",
+    "christian-kohler.npm-intellisense",
+    "mariusalchimavicius.json-to-ts",
+    "kisstkondoros.vscode-gutter-preview",
+    "alefragnani.bookmarks"
   ],
   "unwantedRecommendations": [
     "hookyqr.beautify",
