@@ -102,14 +102,9 @@ npm i eslint-config-prettier eslint-plugin-prettier -D
 
 Next, create a .eslintrc.js config file in the root of your project, and populate it with the following:
 ```js
-// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
-  // parser: 'babel-eslint',
-  // parser: '@typescript-eslint/parser',
   parserOptions: {
-    // parser: 'babel-eslint',
-    // sourceType: 'module',
     ecmaVersion: 2020
   },
   env: {
@@ -117,9 +112,7 @@ module.exports = {
     node: true,
     es6: true
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -127,25 +120,35 @@ module.exports = {
     '@vue/typescript/recommended',
     'plugin:prettier/recommended'
   ],
+  globals: {
+    uni: true,
+    plus: true,
+    uniCloud: true,
+    wx: true,
+    TcPlayer: true,
+    WeixinJSBridge: true,
+    weex: true
+  },
   rules: {
-    'vue/max-attributes-per-line': [1, {
-      'singleline': 10,
-      'multiline': {
-        'max': 1,
-        'allowFirstLine': false
-      }
-    }],
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/multiline-html-element-content-newline': 'off',
     'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
-    'vue/no-unused-components': [2, {
-      'ignoreWhenBindingPresent': true
-    }],
+    'vue/no-unused-components': [
+      2,
+      {
+        ignoreWhenBindingPresent: true
+      }
+    ],
+    'no-mixed-spaces-and-tabs': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, semi: false, htmlWhitespaceSensitivity: 'ignore' }
+    ]
   }
-};
+}
 ```
 
 Next, create a .eslintignore file in the root of your project. This file will tell ESLint which files and folders it should never lint.

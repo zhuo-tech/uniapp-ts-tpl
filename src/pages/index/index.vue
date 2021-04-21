@@ -12,36 +12,36 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import { RootState } from '@/store';
+import Vue from 'vue'
+import Component from 'vue-class-component'
+import { RootState } from '@/store'
 
 @Component
 export default class IndexPage extends Vue {
-  title = 'Zhuo-zhuo';
+  title = 'Zhuo-zhuo'
 
   lists = [
     { id: 0, name: 'A' },
     { id: 1, name: 'B' },
     { id: 2, name: 'C' }
-  ];
+  ]
 
   get state(): RootState {
-    return this.$store.state;
+    return this.$store.state
   }
 
   // computed
   get MyName(): string {
-    return `My name is ${this.title}`;
+    return `My name is ${this.title}`
   }
 
   // methods
   sayHello(): void {
-    console.log(`Hello ${this.title}`);
+    console.log(`Hello ${this.title}`)
   }
 
   mounted(): void {
-    this.sayHello();
+    this.sayHello()
   }
 }
 </script>

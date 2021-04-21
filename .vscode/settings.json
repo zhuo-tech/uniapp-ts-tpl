@@ -46,6 +46,11 @@
   // typescript
   "typescript.format.semicolons": "remove",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   // json
   "[json]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
