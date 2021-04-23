@@ -71,6 +71,8 @@
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
     "sass-loader": "^7.3.1",
+    "url-parse": "^1.5.1",
+    "vconsole": "^3.4.1",
     "vue": "^2.6.11",
     "vuex": "^3.2.0"
   },
@@ -87,6 +89,7 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-31820210406002",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-31820210406002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-31820210406002",
+    "@types/url-parse": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@vue/cli-plugin-babel": "~4.5.0",
