@@ -13,7 +13,7 @@ interface PayOptions {
 export async function invokeWXPay(
   option: PayOptions
 ): Promise<'success' | 'cancel'> {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     // 拉起微信支付
     function onBridgeReady(option: any) {
       WeixinJSBridge.invoke(
