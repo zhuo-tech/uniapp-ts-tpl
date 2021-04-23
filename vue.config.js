@@ -1,5 +1,13 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 'use strict'
 const path = require('path')
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
+const gitRevision = new GitRevisionPlugin()
+
+process.env.VUE_APP_BUILD_VERSION = gitRevision.version()
+process.env.VUE_APP_BUILD_COMMITHASH = gitRevision.commithash()
+process.env.VUE_APP_BUILD_BRANCH = gitRevision.branch()
+process.env.VUE_APP_BUILD_TIME = `${Date.now()}`
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -39,7 +47,7 @@ module.exports = {
     proxy: {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
-        target: 'https://gateway.zhuo-zhuo.com',  // 线上测试环境
+        target: 'https://gateway.zhuo-zhuo.com', // 线上测试环境
         // target: 'http://47.96.236.219:9999',   // 线上测试环境
         // target: 'http://192.168.31.159:9999',  // 俊龙本地环境
         // target: 'http://192.168.31.166:9999',     // 可可本地环境
