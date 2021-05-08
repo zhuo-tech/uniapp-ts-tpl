@@ -1,4 +1,4 @@
-import { getCurrentBaseURL } from './utils'
+import { getCurrentBaseURL } from './utils/url'
 
 /**
  * HTTP 接口请求入口地址

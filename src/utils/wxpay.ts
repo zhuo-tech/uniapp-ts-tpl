@@ -1,5 +1,5 @@
 declare const WeixinJSBridge: any
-
+declare const document: any
 interface PayOptions {
   appId: string // 公众号ID，由商户传入
   timeStamp: number // 时间戳，自1970年以来的秒数

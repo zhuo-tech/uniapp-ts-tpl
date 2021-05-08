@@ -3,3 +3,9 @@ export interface UserInfo {
   nickname: string | null
   phone: string | null
 }
+
+export interface ApiResponseType<T> {
+  code: number
+  data: T
+  msg: string
+}

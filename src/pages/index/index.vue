@@ -3,7 +3,7 @@
     <image class="logo" src="../../static/logo.png" />
     <view>
       <text class="title">{{ title }}</text>
-      {{ state.user.nickname }}
+      {{ $state.global.user.nickname }}
     </view>
     <view v-for="item in lists" :key="item.id">
       {{ item.name }}
@@ -12,12 +12,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import VuePage from '@/base/page'
 import Component from 'vue-class-component'
-import { RootState } from '@/store'
 
 @Component
-export default class IndexPage extends Vue {
+export default class IndexPage extends VuePage {
   title = 'Zhuo-zhuo'
 
   lists = [
@@ -25,10 +24,6 @@ export default class IndexPage extends Vue {
     { id: 1, name: 'B' },
     { id: 2, name: 'C' }
   ]
-
-  get state(): RootState {
-    return this.$store.state
-  }
 
   // computed
   get MyName(): string {

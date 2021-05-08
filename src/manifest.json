@@ -65,5 +65,12 @@
     },
     "mp-qq" : {
         "usingComponents" : true
+    },
+    "h5": {
+        "title": "uniapp",
+        "router": {
+            "mode": "history",
+            "base": "/"
+        }
     }
 }

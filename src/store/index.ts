@@ -1,21 +1,15 @@
-import { UserInfo } from '@/types'
 import Vue from 'vue'
 import Vuex from 'vuex'
+import global, { GlobalState } from './modules/global'
 
 Vue.use(Vuex)
 
 export interface RootState {
-  user: UserInfo
+  global: GlobalState
 }
+
 export default new Vuex.Store<RootState>({
-  state: {
-    user: {
-      nickname: null,
-      phone: null,
-      avatar: null
-    }
-  },
-  mutations: {},
-  actions: {},
-  modules: {}
+  modules: {
+    global
+  }
 })
