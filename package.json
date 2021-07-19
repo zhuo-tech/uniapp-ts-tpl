@@ -70,7 +70,7 @@
     "assert": "^1.5.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
-    "less-api-client": "^0.8.4",
+    "less-api-client": "^1.5.2",
     "moment": "^2.29.1",
     "regenerator-runtime": "^0.12.1",
     "sass-loader": "^7.3.1",
