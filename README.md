@@ -3,9 +3,9 @@
 ## use it: clone
 
 ```
-git clone git@github.com:zhuo-tech/uniapp-with-typescript-eslint-husky-template.git [my-project]
-cd [my-project]
-git remote remove origin
+npx degit zhuo-tech/uniapp-ts-tpl myproject
+
+git init
 git remote add origin [your-own-project-repo-url]
 ```
 
