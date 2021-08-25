@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 module.exports = {
   parser: require('postcss-comment'),
   plugins: [
     require('postcss-import')({
-      resolve (id, basedir, importOptions) {
+      resolve(id, basedir, importOptions) {
         if (id.startsWith('~@/')) {
           return path.resolve(process.env.UNI_INPUT_DIR, id.substr(3))
         } else if (id.startsWith('@/')) {
