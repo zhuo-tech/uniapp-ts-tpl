@@ -1,10 +1,11 @@
-# uniapp-with-typescript-eslint-husky-template
+# uni-app-ts-template
 
 ## use it: clone
 
 ```
 npx degit zhuo-tech/uniapp-ts-tpl myproject
 
+cd myproject
 git init
 git remote add origin [your-own-project-repo-url]
 ```

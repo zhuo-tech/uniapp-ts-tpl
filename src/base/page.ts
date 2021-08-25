@@ -10,6 +10,10 @@ export default class VuePage extends Vue {
     return store
   }
 
+  set $store(value) {
+    console.warn(`Warning: DON'T assign to VuePage.$store!`)
+  }
+
   get $state(): RootState {
     return this.$store.state
   }
