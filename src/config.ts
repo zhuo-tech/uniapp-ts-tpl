@@ -21,5 +21,5 @@ export const BUILD_INFO = {
   // 代码分支: git branch
   branch: process.env.VUE_APP_BUILD_BRANCH,
   // 构建时间: number (ms)
-  time: parseInt(process.env.VUE_APP_BUILD_TIME)
+  time: process.env.VUE_APP_BUILD_TIME,
 }

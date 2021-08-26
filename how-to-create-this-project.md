@@ -36,12 +36,12 @@ vue create -p dcloudio/uni-preset-vue my-project
 npm run serve
 ```
 
-### 配置支持 scss (node-sass & sass-loader)
+### 配置支持 scss (sass & sass-loader)
 
-> uni-app 暂不支持高版本的 sass，使用以下版本组合
+> 使用 dart sass 代替 node-sass， 后者编译安装太慢
 
 ```
-  npm i node-sass@4.14.1 sass-loader@7.3.1 -D
+  npm i sass sass-loader@7.3.1 -D
 ```
 
 

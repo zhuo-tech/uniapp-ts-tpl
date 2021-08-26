@@ -10,7 +10,8 @@
     "christian-kohler.npm-intellisense",
     "mariusalchimavicius.json-to-ts",
     "kisstkondoros.vscode-gutter-preview",
-    "alefragnani.bookmarks"
+    "alefragnani.bookmarks",
+    "streetsidesoftware.code-spell-checker"
   ],
   "unwantedRecommendations": [
     "hookyqr.beautify",

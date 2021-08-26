@@ -7,7 +7,7 @@ const gitRevision = new GitRevisionPlugin()
 process.env.VUE_APP_BUILD_VERSION = gitRevision.version()
 process.env.VUE_APP_BUILD_COMMITHASH = gitRevision.commithash()
 process.env.VUE_APP_BUILD_BRANCH = gitRevision.branch()
-process.env.VUE_APP_BUILD_TIME = `${Date.now()}`
+process.env.VUE_APP_BUILD_TIME = new Date()
 
 function resolve(dir) {
   return path.join(__dirname, dir)

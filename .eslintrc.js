@@ -35,6 +35,7 @@ module.exports = {
         ignoreWhenBindingPresent: true
       }
     ],
+    'vue/script-setup-uses-vars': 'off',
     'no-mixed-spaces-and-tabs': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
