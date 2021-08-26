@@ -10,14 +10,14 @@ const state: GlobalState = {
   user: {
     nickname: null,
     phone: null,
-    avatar: null
-  }
+    avatar: null,
+  },
 }
 
 const mutations: MutationTree<GlobalState> = {
   setUser(state, user) {
     state.user = user
-  }
+  },
 }
 
 const actions: ActionTree<GlobalState, RootState> = {}
@@ -26,7 +26,7 @@ const globalModule: Module<GlobalState, RootState> = {
   namespaced: true,
   state,
   mutations,
-  actions
+  actions,
 }
 
 export default globalModule

@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       count: 0,
-      hitTime: Date.now()
+      hitTime: Date.now(),
     }
   },
   methods: {
@@ -48,8 +48,8 @@ export default {
       this.count = 0
       this.hitTime = Date.now()
       this.pharse2count = 0
-    }
-  }
+    },
+  },
 }
 </script>
 

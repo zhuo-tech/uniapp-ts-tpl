@@ -24,7 +24,7 @@ export const cloud = new Cloud({
   entryUrl: '/app/entry',
   getAccessToken: () => getToken() || '',
   requestClass: CloudRequest,
-  environment: EnvironmentType.UNI_APP
+  environment: EnvironmentType.UNI_APP,
 })
 
 export const db = cloud.database()

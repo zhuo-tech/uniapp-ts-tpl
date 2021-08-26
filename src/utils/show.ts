@@ -6,7 +6,7 @@ export function showSuccess(message: string) {
   uni.showToast({
     title: message,
     icon: 'success',
-    duration: 1500
+    duration: 1500,
   })
 }
 
@@ -18,7 +18,7 @@ export function showTip(message: string) {
   uni.showToast({
     title: message,
     icon: 'none',
-    duration: 2000
+    duration: 2000,
   })
 }
 
@@ -30,6 +30,6 @@ export function showError(message: string) {
   uni.showToast({
     title: message,
     icon: 'none',
-    duration: 4000
+    duration: 4000,
   })
 }

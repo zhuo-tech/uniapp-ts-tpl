@@ -22,7 +22,7 @@ export default class IndexPage extends VuePage {
   lists = [
     { id: 0, name: 'A' },
     { id: 1, name: 'B' },
-    { id: 2, name: 'C' }
+    { id: 2, name: 'C' },
   ]
 
   // computed

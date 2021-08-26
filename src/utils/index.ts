@@ -26,7 +26,7 @@ export function clearUserInfo() {
 export function checkLogin(): void {
   if (!getToken()) {
     uni.reLaunch({
-      url: '/pages/login/index'
+      url: '/pages/login/index',
     })
   }
 }

@@ -29,7 +29,7 @@ export default async function request<T>(
   if (loading) {
     uni.showLoading({
       mask: true,
-      title: loadingText ? `[${loadingText}]加载中...` : '加载中...'
+      title: loadingText ? `[${loadingText}]加载中...` : '加载中...',
     })
   }
 
@@ -72,11 +72,11 @@ export default async function request<T>(
 function _request(options: UniApp.RequestOptions): Promise<[any, any]> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return new Promise((resolve, reject) => {
-    options.success = function(data: any) {
+    options.success = function (data: any) {
       resolve([null, data])
     }
 
-    options.fail = function(err: any) {
+    options.fail = function (err: any) {
       // 我们希望出错不抛异常，而是返回给调用端处理，故用 resolve 而非 reject
       resolve([err, null])
     }

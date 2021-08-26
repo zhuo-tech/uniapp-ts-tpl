@@ -17,8 +17,8 @@ export async function quickLogin(mobile: string, code: string) {
     url: '/login/sms',
     data: {
       mobile,
-      code
-    }
+      code,
+    },
   })
 
   return res.data

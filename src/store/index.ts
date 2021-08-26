@@ -10,6 +10,6 @@ export interface RootState {
 
 export default new Vuex.Store<RootState>({
   modules: {
-    global
-  }
+    global,
+  },
 })
