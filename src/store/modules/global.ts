@@ -8,9 +8,9 @@ export interface GlobalState {
 
 const state: GlobalState = {
   user: {
-    nickname: null,
-    phone: null,
-    avatar: null,
+    nickname: '',
+    phone: '',
+    avatar: '',
   },
 }
 
