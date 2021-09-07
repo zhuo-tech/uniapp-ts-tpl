@@ -13,7 +13,7 @@ class CloudRequest extends UniRequest {
       return res
     } catch (error) {
       console.error(error)
-      showError('您没有该操作权限')
+      showError('出错了:' + error.toString())
       throw error
     }
   }
@@ -21,7 +21,7 @@ class CloudRequest extends UniRequest {
 
 export const cloud = new Cloud({
   baseUrl: API_BASE_URL,
-  entryUrl: '/app/entry',
+  entryUrl: '/proxy/app',
   getAccessToken: () => getToken() || '',
   requestClass: CloudRequest,
   environment: EnvironmentType.UNI_APP,

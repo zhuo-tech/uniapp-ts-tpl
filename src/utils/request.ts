@@ -10,19 +10,14 @@ export default async function request<T>(
 ): Promise<ApiResponseType<T>> {
   options.url = API_BASE_URL + options.url
   options.header = options.header || {}
-  const reg = /token/g
   const token = getToken()
   if (token) {
     options.header['Authorization'] = `Bearer ${token}`
   }
 
-  options.header['ClientId'] = 'Basic c3RvcmU6c3RvcmU='
   options.header['Content-Type'] =
     options.header['Content-Type'] || 'application/json'
-  if (uni.getStorageSync('accessToken') && !reg.test(options.url)) {
-    options.header['Authorization'] =
-      'Bearer ' + uni.getStorageSync('accessToken')
-  }
+
   const method = options.method || 'GET'
   options.method = method.toUpperCase() as any
 
