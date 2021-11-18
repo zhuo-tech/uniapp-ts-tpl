@@ -20,7 +20,4 @@ export default class VuePage extends Vue {
   get $user() {
     return this.$state.global.user
   }
-  checkLogin(): boolean {
-    return this.$user === null
-  }
 }

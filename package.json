@@ -43,7 +43,7 @@
     "@dcloudio/uni-stat": "^2.0.0-32920211029004",
     "@vue/shared": "^3.0.0",
     "assert": "^1.5.0",
-    "laf-client-sdk": "latest",
+    "laf-client-sdk": "^0.6.16",
     "vue": "^2.6.11",
     "vuex": "^3.2.0",
     "wechat-jssdk": "^5.0.7"

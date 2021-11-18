@@ -56,6 +56,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "cSpell.words": [
-    "ifdef"
+    "ifdef",
+    "logined"
   ]
 }
