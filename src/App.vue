@@ -1,9 +1,12 @@
 <script lang="ts">
 import Vue from 'vue'
+import { checkAndUpdateApp } from '@/api/hot-update'
+
 export default Vue.extend({
   mpType: 'app',
   onLaunch() {
     console.log('App Launch')
+    checkAndUpdateApp()
   },
   onShow() {
     console.log('App Show')

@@ -54,5 +54,8 @@
   // json
   "[json]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+  "cSpell.words": [
+    "ifdef"
+  ]
 }

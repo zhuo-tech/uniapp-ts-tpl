@@ -35,7 +35,7 @@ module.exports = {
     open: true,
     overlay: {
       warnings: false,
-      errors: true
+      errors: true,
     },
     proxy: {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
@@ -43,11 +43,11 @@ module.exports = {
         target: 'http://localhost:8000',
         changeOrigin: true,
         pathRewrite: {
-          ['^' + process.env.VUE_APP_BASE_API]: ''
-        }
-      }
+          ['^' + process.env.VUE_APP_BASE_API]: '',
+        },
+      },
     },
-    disableHostCheck: true
+    disableHostCheck: true,
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
@@ -55,8 +55,8 @@ module.exports = {
     name: name,
     resolve: {
       alias: {
-        '@': resolve('src')
-      }
-    }
-  }
+        '@': resolve('src'),
+      },
+    },
+  },
 }

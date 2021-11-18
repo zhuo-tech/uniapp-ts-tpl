@@ -33,3 +33,13 @@ export function showError(message: string) {
     duration: 4000,
   })
 }
+
+export function showLoading(message = '加载中') {
+  uni.showLoading({
+    title: message,
+  })
+}
+
+export function hideLoading() {
+  uni.hideLoading()
+}

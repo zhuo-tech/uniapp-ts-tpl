@@ -9,3 +9,9 @@ export interface ApiResponseType<T> {
   data: T
   msg: string
 }
+
+export interface AppFunctionResult {
+  code: string
+  error?: string
+  data?: any
+}

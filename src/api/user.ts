@@ -1,25 +1,54 @@
-import request from '../utils/request'
+import { AppFunctionResult, UserInfo } from '@/types'
+import { clearUserInfo } from '@/utils'
+import { cloud } from './cloud'
 
-export interface LoginResult {
-  access_token: string
-  user_id: string
-  mobile: string
+export interface LoginResult extends AppFunctionResult {
+  data: {
+    access_token: string
+    uid: string
+    expire: number
+    user: UserInfo
+  }
 }
 
 /**
- * 快速登陆
- * @param mobile 手机号
+ * 快速登录
+ * @param phone 手机号
  * @param code 短信验证码
  */
-export async function quickLogin(mobile: string, code: string) {
-  const res = await request<LoginResult>({
-    method: 'POST',
-    url: '/login/sms',
-    data: {
-      mobile,
-      code,
-    },
+export async function login(phone: string, code: number) {
+  return await cloud.invokeFunction<LoginResult>('app-quick-login', {
+    username: phone,
+    code,
   })
+}
 
-  return res.data
+/**
+ * 密码登录
+ * @param phone 手机号
+ * @param password 密码
+ */
+export async function passwordLogin(phone: string, password: string) {
+  return await cloud.invokeFunction<LoginResult>('app-login-password', {
+    username: phone,
+    password,
+  })
+}
+
+/**
+ * 退出登录
+ */
+export function logout() {
+  clearUserInfo()
+}
+
+/**
+ * 发送登录短信验证码
+ * @param phone
+ * @returns
+ */
+export async function sendLoginSmsCode(phone: string) {
+  return await cloud.invokeFunction<AppFunctionResult>('send-login-sms', {
+    phone,
+  })
 }
