@@ -1,5 +1,6 @@
-import { AppFunctionResult, UserInfo } from '@/types'
-import { clearUserInfo } from '@/utils'
+
+import { AppFunctionResult, UserInfo } from '../utils/types'
+import { clearUserInfo } from '../utils'
 import { cloud } from './cloud'
 
 export interface LoginResult extends AppFunctionResult {

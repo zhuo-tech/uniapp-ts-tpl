@@ -14,28 +14,19 @@
     "strings": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    // "source.fixAll.eslint": true
   },
   // eslint
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",
   "eslint.codeActionsOnSave.mode": "all",
-  // vue & vetur
+  // vue & volar
   "[vue]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "johnsoncodehk.volar"
   },
-  "vetur.format.defaultFormatterOptions": {
-    "prettier": {
-      "semi": false,
-      "singleQuote": true
-    }
-  },
-  "vetur.experimental.templateInterpolationService": true, // vue template 属性提示
-  "vetur.validation.templateProps": true,
-  "vetur.validation.interpolation": true,
   // javascript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
@@ -49,7 +40,7 @@
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   // json
   "[json]": {
@@ -57,6 +48,12 @@
   },
   "cSpell.words": [
     "ifdef",
-    "logined"
+    "logined",
+    "pinia",
+    "uniapp",
+    "vite"
+  ],
+  "i18n-ally.localesPaths": [
+    "locales"
   ]
 }

@@ -1,4 +1,5 @@
-import { showError } from '@/utils/show'
+
+import { showError } from '../utils/show'
 import { Cloud, EnvironmentType, UniRequest } from 'laf-client-sdk'
 import { API_BASE_URL } from '../config'
 import { getToken } from '../utils'
@@ -13,7 +14,7 @@ class CloudRequest extends UniRequest {
       return res
     } catch (error) {
       console.error(error)
-      showError('出错了')
+      showError('请求出错了')
       throw error
     }
   }

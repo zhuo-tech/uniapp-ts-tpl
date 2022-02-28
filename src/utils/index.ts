@@ -1,4 +1,4 @@
-import { UserInfo } from '@/types'
+import { UserInfo } from './types'
 
 const kToken = 'token'
 const kTokenExpire = 'token_expire'
