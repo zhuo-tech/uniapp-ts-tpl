@@ -3,14 +3,19 @@
   <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title">{{ user.nickname }}</text>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useUserStore } from '../../store/user'
 const title = ref('Hello')
+
+const user = useUserStore()
+user.$patch({ nickname: 'maslow' })
+
 </script>
 
 <style lang="less">
